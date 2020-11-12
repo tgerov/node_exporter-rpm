@@ -25,7 +25,7 @@ echo
 %install
 mkdir -vp $RPM_BUILD_ROOT/var/run/prometheus
 mkdir -vp $RPM_BUILD_ROOT/var/lib/prometheus
-mkdir -vp $RPM_BUILD_ROOT/usr/bin
+mkdir -vp $RPM_BUILD_ROOT/usr/sbin
 mkdir -vp $RPM_BUILD_ROOT/usr/lib/systemd/system
 mkdir -vp $RPM_BUILD_ROOT/etc/sysconfig
 mkdir -vp $RPM_BUILD_ROOT/opt/prometheus
@@ -50,7 +50,7 @@ chmod 744 /opt/prometheus
 
 %files
 %defattr(-,root,root,-)
-/usr/bin/node_exporter
+/usr/sbin/node_exporter
 /usr/lib/systemd/system/node_exporter.service
 %config(noreplace) /etc/sysconfig/node_exporter
 /var/run/prometheus
