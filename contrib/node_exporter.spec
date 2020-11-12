@@ -2,7 +2,7 @@
 
 Name:		node-exporter
 Version:	1.0.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Prometheus exporter for machine metrics, written in Go with pluggable metric collectors.
 Group:		System Environment/Daemons
 License:	See the LICENSE file at github.
