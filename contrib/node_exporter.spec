@@ -29,7 +29,7 @@ mkdir -vp $RPM_BUILD_ROOT/usr/bin
 mkdir -vp $RPM_BUILD_ROOT/usr/lib/systemd/system
 mkdir -vp $RPM_BUILD_ROOT/etc/sysconfig
 mkdir -vp $RPM_BUILD_ROOT/opt/prometheus
-install -m 755 node_exporter $RPM_BUILD_ROOT/usr/bin/node_exporter
+install -m 755 node_exporter $RPM_BUILD_ROOT/usr/sbin/node_exporter
 install -m 755 contrib/node_exporter.service $RPM_BUILD_ROOT/usr/lib/systemd/system/node_exporter.service
 install -m 644 contrib/node_exporter.sysconfig $RPM_BUILD_ROOT/etc/sysconfig/node_exporter
 
@@ -57,5 +57,7 @@ chmod 744 /opt/prometheus
 /opt/prometheus
 
 %changelog
+* Thu Nov 12 2020 Tsvetan Gerov <tsvetan@gerov.eu> 1.0.1-2
+- Moved binary from bin to sbin
 * Thu Nov 12 2020 Tsvetan Gerov <tsvetan@gerov.eu> 1.0.1-1
 - Updated to 1.0.1
