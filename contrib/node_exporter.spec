@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		node-exporter
-Version:	1.0.1
-Release:	2%{?dist}
+Version:	1.1.1
+Release:	1%{?dist}
 Summary:	Prometheus exporter for machine metrics, written in Go with pluggable metric collectors.
 Group:		System Environment/Daemons
 License:	See the LICENSE file at github.
@@ -57,6 +57,8 @@ chmod 744 /opt/prometheus
 /opt/prometheus
 
 %changelog
+* Mon Feb 15 2021 Tsvetan Gerov <tsvetan@gerov.eu> 1.1.1-1
+- Bump version to 1.1.1
 * Thu Nov 12 2020 Tsvetan Gerov <tsvetan@gerov.eu> 1.0.1-2
 - Moved binary from bin to sbin
 * Thu Nov 12 2020 Tsvetan Gerov <tsvetan@gerov.eu> 1.0.1-1
